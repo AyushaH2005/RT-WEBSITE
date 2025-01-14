@@ -15,7 +15,7 @@ html {
   font-family: "Montserrat";
 }
 
-
+        
 .logo{
     width: 210px;
     height: auto;
@@ -24,7 +24,7 @@ html {
 
 .logo img{
     display: block;
-    width: 95%;
+    width: 75%;
     height: auto;
 }
     
@@ -79,12 +79,16 @@ html {
         .navbar .buttons a {
             padding: 0.5em 1em;
             border-radius: 5px;
+            margin-right: 5px;
+        }
+        .navbar .buttons a:last-child{
+            margin-right: 0;
         }
 
-        .navbar .buttons {
-      display: flex;
-      gap: 10px;
-    }
+        .navbar .buttons .social a{
+            display: flex;
+            margin-right: 0%;
+        }
 
     .navbar .buttons .btn {
       padding: 8px 15px;
@@ -104,6 +108,12 @@ html {
     .navbar .buttons .btn-give:hover {
       background-color: #ddd;
     }
+
+    .navbar .buttons .social{
+        display: flex;
+        margin: -13px;
+    }
+
 
 .main-container {
   min-height: 100vh;
@@ -153,9 +163,13 @@ html {
     color: black;
 }
 .timeline-content p {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 30px;
   font-weight: 300;
+  display: inline;
+  margin-left: 0%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
 }
 .timeline-content .date {
   font-size: 12px;
@@ -216,6 +230,19 @@ html {
   .timeline ul li:hover::before {
     background-color: aqua;
   }
+
+  .timeline-content .timeline-point {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 15px; /* Space between point and text */
+  flex-shrink: 0;
+}
+
 
 }
 
@@ -313,6 +340,7 @@ html {
 /* Sitemap Section */
 .footer-sitemap {
     text-align: left;
+    transform: translateX(100px);
 }
 
 .footer-sitemap h3 {
@@ -344,6 +372,7 @@ html {
 /* Social Media Section */
 .footer-social {
     text-align: left;
+    transform: translateX(-70px);
 }
 
 .footer-social h3 {
@@ -357,10 +386,16 @@ html {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
+     gap: 10px; /* Space between the icons */
+    margin-right: 20px;
+}
+
+.footer-social-1{
+    transform: translate(250px, -40px);
 }
 
 .footer-social .social-icon:hover {
-    color: #E4405F;
+    color: blue;
 }
 
 /* Bottom Section */
@@ -376,35 +411,42 @@ html {
     
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-          <img src="C:\Users\Ayusha Hongekar\Documents\RT-Website\images\rtlogo1.png" alt="logo">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="C:\Users\Ayusha Hongekar\Documents\RT-Website\images\rtlogo1.png" alt="logo">
+    </div>
+      <div class="links">
+          <a href="../index/index.html">Home</a>
+          <a href="../index/team.html">Members</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="../index/achievements.html">Achievements</a>
+          <a href="#rockets">Rockets</a>
+          
+         
+      </div>
+      <div class="buttons">
+        <button class="btn btn-give">REACH OUT TO US</button>
+        <a href="#footer"></a>
+        
+      </div>
+      <div class="buttons">
+          <div class="social">
+        <a href="https://www.instagram.com/iitb.rocket.team/?hl=en" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+      </a>
+      </div>
+      <div class="social">
+        <a href="https://in.linkedin.com/company/iitbrocketteam" target="_blank" class="social-icon">
+           <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="social">
+        <a href="mailto:iitbrocketteam@gmail.com" target="_blank" class="social-icon">
+          <i class="fas fa-envelope icon"></i>
+        </a>
         </div>
-          <div class="links">
-              <a href="#home">Home</a>
-              <a href="#members">Members</a>
-              <a href="#sponsors">Sponsors</a>
-              <a href="#achievements">Achievements</a>
-              <a href="#rockets">Rockets</a>
-              
-             
-          </div>
-          <div class="buttons">
-            <button class="btn btn-give">REACH OUT TO US</button>
-            
-          </div>
-          <div class="buttons">
-            <a href="https://www.instagram.com/iitb.rocket.team/?hl=en" target="_blank" class="social-icon">
-              <i class="fab fa-instagram"></i>
-          </a>
-            <a href="https://in.linkedin.com/company/iitbrocketteam" target="_blank" class="social-icon">
-               <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:iitbrocketteam@gmail.com" target="_blank" class="social-icon">
-              <i class="fas fa-envelope icon"></i>
-            </a>
-          </div>
-      </nav>
+      </div>
+  </nav>
       
       <div class="main-container">
         <section class="timeline">
@@ -413,35 +455,49 @@ html {
             <li>
               <div class="timeline-content">
                 <h2 class="date">2024</h2>
-                <h1>Heading 1</h1>
-                <p>19th in our category, 34th worldwide</p>
+                <h1></h1>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>19th in our category, 34th worldwide</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="timeline-content">
+                
                 <h2 class="date">2023</h2>
-                <h1>Heading 2</h1>
+                <h1></h1>
                 <div class="bullet-points">
-                <p>1) first sa cup entry secured first national rank.</p>
-                <p>2) 2nd position in techzibtion 23 at iit roorkee.</p>
-                <p>3) 1st position at engineers conclave at inter iit tech meet 11.0 in iit madras.</p>
-                <p>4) Placed 1st in techexpo iit guwahati.</p>
-                <p>5) Aveshaan place third.</p>
+                  <span class="timeline-point"></span><p>First sa cup entry secured first national rank.</p></div>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>2nd position in techzibtion 23 at iit roorkee.</p>
+                </div>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>1st position at engineers conclave at inter iit tech meet 11.0 in iit madras.</p>
+                </div>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>Placed 1st in techexpo iit guwahati.</p>
+                </div>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>Aveshaan place third.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="timeline-content">
                 <h2 class="date">2022</h2>
-                <h1>Heading 3</h1>
-                <p>First Test launch.</p>
+                <h1></h1>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>First Test launch.</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="timeline-content">
                 <h2 class="date">2019</h2>
                 <h1></h1>
-                <p>Team is established.</p>
+                <div class="bullet-points">
+                  <span class="timeline-point"></span><p>Team is established.</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -601,8 +657,10 @@ html {
         
   
         <!-- Social Media Section -->
-        <div class="footer-social">
+        <div class="footer-social-1">
             <h3>Social Media</h3>
+            </div>
+            <div class="footer-social">
             <a href="https://www.instagram.com/iitb.rocket.team/?hl=en" target="_blank" class="social-icon">
                 <i class="fab fa-instagram"></i>
             </a>
